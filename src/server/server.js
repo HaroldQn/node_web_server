@@ -1,7 +1,7 @@
-const express = require("express");
-const path = require("path");
+import express from 'express'
+import path from 'path'
 
-const iniciarServidor = (options) => {
+export const iniciarServidor = (options) => {
   const { port, public_path = "public"} = options;
   
   const app = express();
@@ -18,7 +18,3 @@ const iniciarServidor = (options) => {
     console.log(`Servidor corriendo en el puerto ${port}`)
   })
 };
-
-module.exports = {
-    iniciarServidor
-}
